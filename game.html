@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="style.css">
+		<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+		<script src="official-levels.js"></script>
+		<script src="game-script.js"></script>
+		<title></title>
+	</head>
+	<body bgcolor="#C59BC5" id="game" style="overflow: hidden">
+		<input type="file" id="file" accept=".lvl, .cql, .txt, .json" onchange="readFile(false)">
+		<br>
+		<span id="xTxt">OR select official level number here (1-15): </span>
+		<input type="number" id="olid" min="1" max="15" value="1">
+		<button id="xBtn" onclick="readFile(true, $('#olid').val())">Let's go!</button>
+		<div id="field">
+			
+		</div>
+		<b class="hint">0 - 9: Switch skins<br>R: restart the level</b>
+		<b class="starcount">Stars: 0</b>
+		<img id="player" src="skins/49.png">
+		<img id="de" src="etc/dead.png">
+		<i class="lvlinfo"></i>
+	</body>
+</html>
+

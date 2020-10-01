@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap');
+* {
+	font-family: 'Noto Sans JP', sans-serif;
+}
+iframe.main {
+	margin: 0;
+    position: absolute;
+    top: calc(50vh - 336px);
+    left: calc(50vw - 576px);
+    width: 1152px;
+	height: 672px;
+	border-width: 5px;
+	border-style: solid;
+	border-color: slateblue;
+	border-radius: 15px;
+	z-index: -2;
+}
+button.mode {
+	cursor: pointer;
+	background-color: #A600C9;
+	color: white;
+	font-size: 175%;
+	margin: 16px;
+	border-radius: 10px;
+}
+button.mode:hover {
+	background-color: #D300FF;
+}
+button.mode.active {
+	background-color: #E774FF;
+}
+button.mode.active:hover {
+	background-color: #EFA3FF;
+}
+div#field {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+img.block {
+	position: absolute;
+}
+img#player {
+	position: absolute;
+	opacity: 0;
+	z-index: 5;
+}
+img#de {
+	position: absolute;
+	opacity: 0;
+	z-index: 4;
+}
+b.hint {
+	position: fixed;
+	top: 10px;
+	right: 100px;
+}
+b.starcount {
+	position: fixed;
+	top: 10px;
+	left: calc(50vw - 22.5px);
+}
+img.laser {
+	z-index: 4;
+}
+img.laser.pre {
+	opacity: 0.3;
+}
+table {
+	border: 0;
+}
+i.lvlinfo {
+	font-size: 200%;
+	position: fixed;
+	bottom: 5px;
+	left: 5px;
+}

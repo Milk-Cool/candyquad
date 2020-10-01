@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="style.css">
+		<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+		<title></title>
+	</head>
+	<body bgcolor="white">
+		<b class="hint">Press 1 to select tile.<br>Press 2 to edit level settings.<br>Press 3 to save the level.</b>
+		<div id="field">
+			
+		</div>
+		<div style="position: fixed; top: 0; right: -400px; background-color: rgba(99, 99, 99, 0.8); border-radius: 10px; width: 400px; height: 100vh; overflow-x: hidden;" id="lvldata">
+			<h1><font color="white">Change info, add lasers and custom blocks!</font></h1>
+			<textarea style="width: 400px; height: 300px" id="lvlsets" onfocus="skippress = true" onblur="skippress = false; updCs()">"properties":
+	{"width": 24,
+	"height": 14,
+	"artist": "",
+	"name": "",
+	"hint": "",
+	"song": ""},
+"lasers": [],
+"custom": []</textarea>
+			<h3><font color="white">Name (to save file)</font></h3>
+			<input value="level" id="lvlname" onfocus="skippress = true" onblur="skippress = false">
+			<h2><font color="white">Need help? Read the guide! </font><a href="etc/guide.pdf" target="_blank">Click here</a></h2>
+		</div>
+		<div style="position: fixed; top: 15px; left: -200px; background-color: rgba(199, 199, 199, 0.5); border-radius: 10px; width: 120px; height: 175px; overflow-x: hidden;" id="blockselect">
+			<input id="tileid" style="width: 3em" onfocus="skippress = true" onblur="skippress = false"><button onclick="changeTileF($('#tileid').val())">Select</button>
+		</div>
+		<script src="editor-script.js"></script>
+	</body>
+</html>
+
