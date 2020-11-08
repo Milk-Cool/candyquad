@@ -3,6 +3,7 @@ function playsound(path){
 		new Audio(path).play();
 	}, 0, path);
 }
+if(Cookies.get("-candyquad-stars") == undefined) Cookies.set("-candyquad-stars", "0");
 var keysPressed = {
 	left: false,
 	right: false,
@@ -32,7 +33,7 @@ lasers = [],
 is_official_level = false,
 se_t,
 lstlas = 0,
-stars = 0,
+stars = Number(Cookies.get("-candyquad-stars")),
 pre_laser,
 off_lvl_n = 1;
 sm = true,
@@ -484,3 +485,9 @@ function death_effect(x, y){
 	}
 }
 setInterval(move, 250);
+setInterval(function(){
+	Cookies.set("-candyquad-stars", String(stars));
+}, 200);
+window.onload = function(){
+	$("b.starcount").text("Stars: " + Cookies.get("-candyquad-stars"));
+};
